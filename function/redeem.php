@@ -21,10 +21,9 @@ if (strpos($message, "/redeem") === 0) {
                 $expiryDate = date('Y-m-d', strtotime("+$expiryDays days"));
                 file_put_contents('Database/paid.txt', "$userId $expiryDate\n", FILE_APPEND);
 
-                sendMessage($chatId, "<b>
-                Address: 66.118.234.34
-                User: root
-                Password: 3UP9nPaNKgT00dy5ArKO</b>", $messageId);
+                sendMessage($chatId, "<b>Address: 66.118.234.34
+User: root
+Password: 3UP9nPaNKgT00dy5ArKO</b>", $messageId);
             } else {
                 $newCodesAndExpiryDays[] = $line;
             }
