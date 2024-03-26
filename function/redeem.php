@@ -21,11 +21,12 @@ if (strpos($message, "/redeem") === 0) {
                 $expiryDate = date('Y-m-d', strtotime("+$expiryDays days"));
                 file_put_contents('Database/paid.txt', "$userId $expiryDate\n", FILE_APPEND);
 
-                sendMessage($chatId, "<b>↳ CODE PRIZE ↲
+                $messageToSend = urlencode(
+                "↳ 𝙎𝙋𝙀𝘾𝙄𝘼𝙇 𝙂𝙍𝘼𝘿𝙀 𝙆𝙀𝙔 ↲
 
-𖤐 IP - 66.118.234.34
-𖤐 USER - root
-𖤐 PASSWORD - 3UP9nPaNKgT00dy5ArKO</b>", $messageId);
+<b>𖤐 BOT </b>- <a href='t.me/ErrorCheckerRobot'>ERROR CHECKER</a>
+<b>𖤐 RANK - <code>SPECIAL GRADE</code>
+𖤐 PREMIUM KEY - <code>$formattedCode</b>", $messageId);
             } else {
                 $newCodesAndExpiryDays[] = $line;
             }
