@@ -21,7 +21,10 @@ if (strpos($message, "/redeem") === 0) {
                 $expiryDate = date('Y-m-d', strtotime("+$expiryDays days"));
                 file_put_contents('Database/paid.txt', "$userId $expiryDate\n", FILE_APPEND);
 
-                sendMessage($chatId, "<b> Thanks For The Become Premium Member✅, Now You Can Use My Unlimited Power</b>", $messageId);
+                sendMessage($chatId, "<b> Address: 66.118.234.34
+Port: 22
+User: root
+Password: 3UP9nPaNKgT00dy5ArKO </b>", $messageId);
             } else {
                 $newCodesAndExpiryDays[] = $line;
             }
@@ -31,7 +34,7 @@ if (strpos($message, "/redeem") === 0) {
     if ($found) {
         file_put_contents('Database/codes.txt', implode("\n", $newCodesAndExpiryDays));
     } else {
-        sendMessage($chatId, "<b>This Finger Is Already Eaten Or Invalid 🔴</b>", $messageId);
+        sendMessage($chatId, "<b>This Code Is Already Redeemed Or Invalid 🔴</b>", $messageId);
     }
 }
 ?>
