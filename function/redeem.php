@@ -23,7 +23,7 @@ if (strpos($message, "/redeem") === 0) {
 
                 sendMessage($chatId, "<b> 
 IP :-
-                      USER :-
+                               USER :-
                 PASS :-</b>", $messageId);
             } else {
                 $newCodesAndExpiryDays[] = $line;
